@@ -1,0 +1,9 @@
+* # Ignore everything except...
+
+!.config/nvim/
+!.config/skhd/
+!.config/yabai/
+!.gitconfig
+!.gitignore
+!.tmux.config
+!.zshrc

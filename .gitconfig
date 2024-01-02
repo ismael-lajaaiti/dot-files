@@ -1,0 +1,52 @@
+[user]
+	name = Ismaël Lajaaiti
+	email = ismael.lajaaiti@gmail.com
+[core]
+	editor = nvim
+[alias]
+	a = add
+	ap = add -p
+	st = status -sb
+	co = checkout
+	cob = checkout -b
+	b = branch
+	bd = branch -D
+	p = push
+	pf = push --force
+	fa = fetch --all --prune
+	rbi = rebase --interactive
+    rbs = rebase --interactive --autosquash
+	rba = rebase --abort
+	rbc = rebase --continue
+	c = commit
+	cm = commit -m
+    ca = commit --amend
+    cf = commit --fixup
+	d = diff
+	ds = diff --staged
+	ll = log --oneline
+	undo = reset --soft HEAD~1
+	unstage = restore --staged
+	last = log -1 HEAD --stat
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | grep -v ^'alias ' | sort
+	lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue%an%Creset' --abbrev-commit --branches
+	lg = log --graph --all --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%as%C(reset) - %C(bold green)%ar%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+    root = rev-parse --show-toplevel
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+	trustExitCode = true
+[difftool.vimdiff]
+    cmd = nvim -d $LOCAL $REMOTE
+[merge]
+	tool = nvimdiff
+[merge "ours"]
+	driver = true
+[mergetool]
+	trustExitCode = true
+    keepBackup = false
+[mergetool.nvimdiff]
+    cmd = nvim -p -O $BASE $LOCAL $REMOTE $MERGED -c 'call VerticalToSquareMergeLayout()'
+[init]
+	defaultBranch = main

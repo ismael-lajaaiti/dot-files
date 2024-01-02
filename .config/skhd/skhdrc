@@ -1,0 +1,31 @@
+# Change window focus within space.
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+# Modify layout.
+shift + alt - r : yabai -m space --rotate 270 # Rotate clockwise.
+shift + alt - y : yabai -m space --mirror y-axis # Vertical symmetry.
+shift + alt - x : yabai -m space --mirror x-axis # Horizontal symmetry.
+
+# Modify window size.
+shift + alt - m : yabai -m window --toggle zoom-fullscreen # Fullscreen.
+shift + alt - e : yabai -m space --balance
+
+# Swap windows.
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + lalt - l : yabai -m window --swap east
+
+# Move window between spaces.
+shift + alt - p : yabai -m window --space prev || yabai -m window --space 7
+shift + alt - n : yabai -m window --space next || yabai -m window --space 1
+shift + alt - 0x12 : yabai -m window --space 1 # Move to space 1.
+shift + alt - 0x13 : yabai -m window --space 2
+shift + alt - 0x14 : yabai -m window --space 3
+shift + alt - 0x15 : yabai -m window --space 4
+shift + alt - 0x16 : yabai -m window --space 5
+shift + lalt - 0x17 : yabai -m window --space 6
+shift + alt - 0x1A : yabai -m window --space 7
